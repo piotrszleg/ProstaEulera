@@ -1,0 +1,30 @@
+/ change numbers to titles on hover in navbar
+	$("a[hover-text]").hover(
+	  function() {
+	  	this.hover=true;
+
+		if(this.writting!==true){
+			var textToSwitch=$(this).attr("hover-text");
+			$(this).text("");
+			this.writting=true;
+
+			var letterIndex=0;
+
+			this.letterAnimation=setInterval(function(){
+				if(letterIndex<textToSwitch.length){
+					$(this).text($(this).text()+textToSwitch[letterIndex]);
+					letterIndex++;
+				} else{
+					if(!this.hover){
+						$(this).text($(this).attr("n"));
+						clearInterval(this.letterAnimation);
+						this.writting=false;
+					}
+				}
+			}.bind(this), 3);
+		}
+	  }, 
+	  function() {
+	  	this.hover=false;
+	  }
+	);

@@ -1,0 +1,234 @@
+## Wstęp
+
+---
+
+__Prosta Eulera__ to prosta przechodząca przez ortocentrum H, środek ciężkości G i środek okręgu O opisanego na danym trójkącie. Należy do niej środek okręgu Eulera, czyli okrąg na którym leżą spodki wysokości, środki boków i punkty Eulera danego trójkąta. Ta strona ma zadanie wyjaśnić pojęcie prostej Eulera, ukazać przykłady trójkątów o wspólnej prostej Eulera i scharakteryzować stałe wartości związane z tą prostą.
+
+<canvas id="wstep-canvas" class="img-fluid" width="800" height="600"></canvas>
+<nav class="text-center nav-justified">
+	<ul id="wstep-pagination" class="pagination pg-green pagination-lg justify-content-center">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		 <li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">Dowód na współliniowość punktów H, G i O</h4>
+	<hr>
+	<p>
+		Niech X, Y i Z będą odpowiednio środkami boków BC, CA i AB trokąta ABC. Trójkąt XYZ jest podobny do trójkąta ABC w skali 1:2<br>
+		Wysokości w trójkącie XYZ przecinają się w punkcie O, więc \(OX : HA = 1 : 2\).<br><br>
+		Niech G' będzie punktem przecięcia się odcinków OH i AX. <br>
+		Zatem \(AG' : G'A = 0X : HA = 1 : 2\), <br>
+		Więc \(G' = G\) i \(OG' : G'H = OX : HA = 1 : 2\), z czego otrzymujemy, że odległość środka ciężkości od ortocentrum jest dwa razy większa niż jego odległość od środka okręguopisanego na tym trójkącie.
+	</p>
+</div>
+
+## Trójkąty, które mają tą samą prostą Eulera
+
+---
+
+Pomimo, że jeden trójkąt może mieć dokładnie jedną prostą Eulera, to nie wyznacza ona jednoznacznie trójkąta.
+Najprostszym przykładem trójkątów posiadających tą samę prostą Eulera jest zbiór trójkątów przystających do danego i przesuniętych o wektor dowolnej długości równoległy do prostej Eulera tego trójkąta.
+
+![](img/illustrations/przesuniecie.png)
+
+Kolejnym przykładem trójkątów o wspólnej prostej Eulera są dwa trójkąty ABC i XYZ, gdzie środkowe trójkąta ABC są równocześnie wierzchołkami trójkąta XYZ.
+
+<canvas id="wspolna-os-canvas" class="img-fluid" width="800" height="600"></canvas>
+<nav class="text-center nav-justified">
+	<ul id="wspolna-os-pagination" class="pagination pg-green pagination-lg justify-content-center">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">Prosta Eulera 🛆XYZ, którego wierzchołki leżą w środkach boków 🛆ABC jest również prostą Eulera 🛆ABC</h4>
+	<hr>
+	<p>
+		Środkowe trójkąta \(ABC\) przecinają się w punkcie \(G\) i dzielą się w stosunku \(2:1\). <br>
+		Zatem trójkąt XYZ jest jednokładny do trójkąta ABC względem punktu \(G\) i w skali \(—1/2\). <br>
+		Prosta Eulera trójkąta \(XYZ\) jest więc obrazem prostej Eulera trójkąta ABC w tej samej jednokładności. <br> 
+		Ponieważ zaś środek jednokładności, czyli punkt \(G\) leży na prostej Eulera trójkąta \(ABC\), to jej obraz pokrywa się z nią samą, co kończy dowód.
+	</p>
+</div>
+
+## Trójkąty o wspólnych środkach ciężkości
+
+---
+
+<canvas id="odbicia-canvas" class="img-fluid" width="800" height="600"></canvas>
+<nav class="text-center nav-justified">
+	<ul id="odbicia-pagination" class="pagination pg-green pagination-lg justify-content-center">
+		<li class="page-item"> 
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">K, L oraz M są odpowiednio punktami powstałymi przez odbicie wierzchołka A względem C, wierzchołka C względem B oraz wierzchołka B względem A. <br>Środek ciężkości 🛆KLM pokrywa się ze środkiem ciężkości 🛆ABC.</h4>
+	<hr>
+	<p>
+		Niech punkty A, B i C mają odpowiednio współrzędne (x1, y1), (x2, y2) oraz (x3, y3),a punkty
+		K, L i M (a1, b1), (a2, b2) oraz (a3, b3).<br>
+	
+		Mamy G =  \((\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3})\)<br>
+		\(x_2=\frac{a_2+x_3}{2} \Leftrightarrow a_2=2x_2-x_3\)<br>
+	
+		i analogicznie: <br>
+		\(a_3 = 2x_1-x_2\)<br>
+		\(a_1 = 2x_3-x_1\)<br>
+		
+	
+		oraz: \(b_1 = 2y_3 - y_1\)<br>
+		\(b_2 = 2y_2 - y_1\)<br>
+		\(b_3 = 2y_1 - 3y_2\)<br>
+	
+		zatem: \( G' = (\frac{a_1+a_2+a_3}{3}, \frac{b_1+b_2+b_3}{3}) \)<br>
+		\(\Leftrightarrow G' = (\frac{2x_3-x_1+2x_2-x_3+2x_1-x_2}{3}, \frac{2y_3-y_1+2y_2-y_3+2y_1-y_2}{3}) \)<br>
+		\(\Leftrightarrow G' = (\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3}) \) co kończy dowód.
+	</p>
+</div>
+![](img/illustrations/trojkaty.png)
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">Na bokach trójkąta ABC zbudowano trójkąty równoboczne AUB, BTC i CSA. Środki ciężkości trójkątów ABC i STU pokrywają się.</h4>
+	<hr>
+	<p>Pozostając przy oznaczeniach:<br>
+		\(A = (x_1, y_1)&emsp;B = (x_2, y_2)&emsp;C = (x_3, y_3)\)<br>
+		\(S = (a_1, b_1)&emsp;T = (a_2, b_2)&emsp;U = (a_3, b_3)\)<br>
+
+		G' to środek ciężkości nowopowstałego trójkąta.<br><br>
+
+		Punkt U leży na prostej prostopadłej do boku AB przechodzącej przez jego środek. Współrzędne
+		środka wynoszą \((\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2})\), a współczynnik kierunkowy prostej, na której leży bok AB: \(\frac{y_2-y_1}{x_2-x_1}\)<br>
+
+		Współczynnik kierunkowy w. prostej, na której leży punkt U wynosi: \(-\frac{1}{\frac{y_2-y_1}{x_2-x_1}} = \frac{x_1-x_2}{y_2-y_1}\).<br>
+
+		Podstawiając współrzędne środka boku AB otrzymuję równanie prostej, na której leży punkt U:<br>
+		\(\frac{x_1-x_2}{y_2-y_1}*\frac{x_1+x_2}{2}+b=\frac{y_1+y_2}{2}\)<br>
+		\(b=\frac{y_1+y_2}{2}-\frac{x_1-x_2}{y_2-y_1}*\frac{x_1+x_2}{2}\)<br>
+		\(y=\frac{x_1-x_2}{y_2-y_1}+\frac{y_1+y_2}{2}-\frac{x_1-x_2}{y_2-y_1}*\frac{x_1+x_2}{2}\)<br>
+
+		Prawdziwa jest zatem równość:<br>
+		\((a_1-\frac{x_1+x_2}{2})^2+(\frac{x_1-x_2}{y_2-y_1}+\frac{y_1+y_2}{2}-\frac{x_1-x_2}{y_2-y_1}*\frac{x_1+x_2}{2}-\frac{y_1+y_2}{2}\)<br>
+
+		Które daje następujące rozwiązania:<br>
+
+		\(a_1=\frac{\sqrt{3}y_2-\sqrt{3}y_1+x_1+x_2}{2}\)&emsp;v&emsp;\(a_1=\frac{\sqrt{3}y_1-\sqrt{3}y_2+x_1+x_2}{2}\)<br>
+
+		Można przyjąć \(a_1=\frac{\sqrt{3}y_2-\sqrt{3}y_1+x_1+x_2}{2}\)<br>
+
+		I analogicznie: \(a_2=\frac{\sqrt{3}y_3-\sqrt{3}y_2+x_2+x_3}{2}\)&emsp;\(a_3=\frac{\sqrt{3}y_3-\sqrt{3}y_2+x_2+x_3}{2}\)<br>
+
+		Stąd: \(b_1=\frac{\sqrt{3}(x_3-x_2)+y_1+y_2}{2}\)&emsp;\(b_2=\frac{\sqrt{3}(x_1-x_3)+y_2+y_3}{2}\)&emsp;\(b_3=\frac{\sqrt{3}(x_2-x_1)+y_3+y_1}{2}\)<br>
+		
+		I ostatecznie: \(G'=(\frac{a_1+a_2+a_3}{3}, \frac{b_1+b_2+b_3}{3})\) czyli: \(G'=(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3})\)
+	</p>
+</div>
+
+## Stałe wartości związane z prostą Eulera
+
+---
+
+Z prostą Eulera i punktami na niej leżącymi jest związanych wiele stałych wielkości. 
+Przedstawię teraz dwie stałe związane ze środkiem ciężkości i środkiem trójkąta opisanego na trójkącie.
+
+![](img/illustrations/stala.png)
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">Wybrano punkt F na prostej AG, gdzie G jest środkiem ciężkości trójkąta ABC. Wartość wyrazenia \(FB^2+FC^2-GB^2-GC^2\) jest stała, zależy jedynie do wyboru punktu F</h4>
+	<hr>
+	<p>
+		\(\overrightarrow{FB}=\overrightarrow{FG}+\overrightarrow{GB}\)<br>
+		\(\overrightarrow{FC}=\overrightarrow{FG}+\overrightarrow{GC}\)<br>
+		Czyli:
+		\(FB^2+FC^2-GB^2-GC^2=\\
+		=FG^2+2*\overrightarrow{FG}*\overrightarrow{GB}+GB^2+FG^2+2*\overrightarrow{FG}*\overrightarrow{GC}+GC^2-GB^2-GC^2=\\
+		=2(FG^2+\overrightarrow{FG}(\overrightarrow{GB}+\overrightarrow{GC}))=2(FG^2+\overrightarrow{FG}*\overrightarrow{AG})=2FG(FG+AG)=const\)
+	</p>
+</div>
+
+<canvas id="dwusieczna-canvas" class="img-fluid" width="800" height="600"></canvas>
+<nav class="text-center nav-justified">
+	<ul id="dwusieczna-pagination" class="pagination pg-green pagination-lg justify-content-center">
+		<li class="page-item"> 
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="proof text-left">
+	<h4 class="text-success font-weight-bold">Wartość wyrazenia \(\frac{AC+BC}{CK}\) zależy tylko od wyboru łuku AB na którym leży punkt C, nie zaś od wyboru punktu C</h4>
+	<hr>
+	<p>
+		Z twierdzenia Ptolemeusza otrzymujemy:<br>
+		\(AC*KB+BC*KA=CK*AB\)<br>
+		Łuki AK i KB są równe, więc odcinki AK i BK są równej długości, zatem:<br>
+		\(\frac{AC+BC}{CK}=AB|KB=const\)<br>
+		Ponieważ AB i KB są wielkościami stałymi.
+	</p>
+</div>
+
+## Źródła
+
+---
+
+[1] *Punkty charakterystyczne na prostej Eulera*

@@ -1,0 +1,4 @@
+TODO:
+-filler text in between thesis
+-replace blockquotes with divs
+-make steps names start with lowercase
